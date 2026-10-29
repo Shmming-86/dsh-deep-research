@@ -1,0 +1,7 @@
+{
+  "name": "dsh-deep-research-tests",
+  "private": true,
+  "type": "module",
+  "description": "Offline unit tests for @shmming/dsh-deep-research. The main entry exists so that `node --test test/` (Node >= 22 treats positional args as glob patterns, not directories) still runs the suite from a directory path.",
+  "main": "./plugin.test.mjs"
+}

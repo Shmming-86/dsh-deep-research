@@ -1,0 +1,13 @@
+# dsh-deep-research profile bundle patch (declared by the `dsh.bundle.patch`
+# manifest field). Listing @shmming/dsh-deep-research in a profile's
+# `dsh.profile.bundles` inserts this one root row; the row loads the plugin by
+# package name from the profile's node_modules (or from a linked checkout).
+#
+# The plugin only requires `tools` and `subagents`, which the shipped `web` and
+# `headless` compositions provide at the root, so no preset-scoped insertion is
+# needed (unlike a `workflowEngine`-based plugin: current DSH mounts its
+# workflow engine inside agent-preset delegation groups with
+# `isolate: { workflowEngine: true }`).
+- insert:
+    - id: dsh-deep-research
+      name: '@shmming/dsh-deep-research'

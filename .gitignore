@@ -1,0 +1,10 @@
+node_modules/
+_verify/
+_testhome/
+_scratch/
+_leadcheck/
+_ref/
+*.log
+*.tgz
+.DS_Store
+.pnpm-store/

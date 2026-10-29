@@ -1,0 +1,77 @@
+{
+  "name": "@shmming/dsh-deep-research",
+  "version": "0.2.0",
+  "description": "Deep Research orchestrator for DeepSeek Harness: an adaptive cybernetics/information-theory deep_research tool built on the official subagent seam, reusing built-in web_search/web_fetch. Ported from @dsh-external/dsh-deep-research for DSH 0.2.1-rc.3.",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "deep-research",
+    "research",
+    "subagent",
+    "workflow",
+    "web-search",
+    "report"
+  ],
+  "author": "shmming",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shmming-86/dsh-deep-research.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shmming-86/dsh-deep-research/issues"
+  },
+  "homepage": "https://github.com/Shmming-86/dsh-deep-research#readme",
+  "type": "module",
+  "icon": "./assets/icon.svg",
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./icon": "./assets/icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "types",
+    "assets",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "docs"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "scripts": {
+    "test": "node --test test/",
+    "verify:profile": "node scripts/verify-profile.mjs",
+    "verify": "node --test test/ && node scripts/verify-profile.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5",
+    "@deepseek-ai/dsh-subagent": ">=0.2.1-rc.2 <0.3.0",
+    "@deepseek-ai/dsh-tools": ">=0.2.1-rc.2 <0.3.0",
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
